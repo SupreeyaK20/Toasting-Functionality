@@ -1,26 +1,31 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react';
+import { Button } from '@mui/material';
+import Toast from './Toast';
+import './App.css'
 
-function App() {
+const App: React.FC = () => {
+  const [showToast, setShowToast] = useState(false);
+
+  const handleButtonClick = () => {
+    setShowToast(true);
+  };
+
+  const handleToastConfirm = () => {
+    console.log('Toast button called.');
+    setShowToast(false);
+  };
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className="content">
+        <h2>Hello there, 
+        <Button variant="contained" className="open-toast" onClick={handleButtonClick}>
+          Click me
+        </Button>for the Toast feature</h2>
+        {showToast && <Toast onConfirm={handleToastConfirm} />}
+      </div>
     </div>
   );
-}
+};
 
 export default App;

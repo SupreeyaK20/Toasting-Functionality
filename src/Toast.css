@@ -1,0 +1,66 @@
+.toast-container {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    width: 380px;
+    background-color: #1883d1;
+    color: white;
+    border-radius: 6px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 8px;
+  }
+  
+  .toast-container .toast-icon {
+    margin: 5px;
+  }
+  
+  .toast-container .title {
+    margin: 0;
+    font-size: 16px;
+    text-align: left;
+    margin-bottom: 8px;
+  }
+  
+  .toast-container .content {
+    margin: 0;
+    font-size: 14px;
+    margin-bottom: 10px;
+    text-align: left;
+    word-wrap: break-word;
+  }
+  
+  .toast-container .button-container {
+    display: flex;
+    gap: 10px;
+    margin-top: 8px;
+  }
+  
+  .toast-container .confirm-button {
+    color: black;
+    background-color: white;
+    font-size: 12px;
+    padding: 4px 8px;
+    box-shadow: none;
+  }
+  
+  .toast-container .confirm-button:hover {
+    color: white;
+    background-color: #1883d1;
+  }
+  
+  .toast-container .cancel-button {
+    color: white;
+    background-color: transparent;
+    font-size: 12px;
+    padding: 4px 8px;
+    box-shadow: none;
+  }
+  
+  .toast-container .cancel-button:hover {
+    color: black;
+    background-color: white;
+  }
+  
